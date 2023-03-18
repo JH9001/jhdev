@@ -10,7 +10,15 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 
-const pages = ["Products", "Pricing", "Blog"];
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+
+const links = [
+  { id: 1, icon: <GitHubIcon />, name: "GitHub" },
+  { id: 2, icon: <LinkedInIcon />, name: "LinkedIn" },
+  { id: 3, icon: <EmailIcon />, name: "Resume" },
+];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -99,9 +107,9 @@ function Navbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {links.map((link) => (
+                <MenuItem key={link.id} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{link.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -114,13 +122,13 @@ function Navbar() {
               display: { xs: "none", md: "flex" },
             }}
           >
-            {pages.map((page) => (
+            {links.map((link) => (
               <Button
-                key={page}
+                key={link.id}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                {link.icon}
               </Button>
             ))}
           </Box>
