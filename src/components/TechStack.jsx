@@ -16,7 +16,13 @@ const Item = styled(Paper)(({ theme }) => ({
 function TechStack() {
   return (
     <>
-      <Typography>Tech Stack</Typography>
+      <Typography
+        sx={{
+          fontSize: "h4",
+        }}
+      >
+        Tech Stack
+      </Typography>
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container

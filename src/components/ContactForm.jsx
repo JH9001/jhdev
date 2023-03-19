@@ -1,4 +1,4 @@
-import { Button, TextField, useMediaQuery } from "@mui/material";
+import { Button, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { Form, Formik } from "formik";
 import * as yup from "yup";
@@ -22,6 +22,13 @@ const ContactForm = () => {
 
   return (
     <Box>
+      <Typography
+        sx={{
+          fontSize: "h4",
+        }}
+      >
+        Send me an email
+      </Typography>
       <Formik
         onSubmit={handleFormSubmit}
         initialValues={initialValues}

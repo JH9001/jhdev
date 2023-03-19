@@ -1,3 +1,7 @@
+import { Box } from "@mui/system";
+import Typography from "@mui/material/Typography";
+import MenuItem from "@mui/material/MenuItem";
+
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
@@ -9,6 +13,14 @@ const links = [
 ];
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <Box sx={{ display: "flex" }}>
+      {links.map((link) => (
+        <MenuItem key={link.id}>
+          <Typography textAlign="center">{link.icon}</Typography>
+        </MenuItem>
+      ))}
+    </Box>
+  );
 };
 export default Footer;

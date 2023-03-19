@@ -3,10 +3,10 @@ import { Box, Container, display } from "@mui/system";
 
 const Hero = () => {
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", bgcolor: "red" }}>
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
       <Typography
         sx={{
-          fontSize: "h1",
+          fontSize: "h3",
           fontFamily: "monospace",
           fontWeight: 700,
           letterSpacing: ".3rem",
@@ -14,7 +14,7 @@ const Hero = () => {
           textDecoration: "none",
         }}
       >
-        Hero
+        About Me
       </Typography>
     </Box>
   );

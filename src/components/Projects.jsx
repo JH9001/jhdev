@@ -16,7 +16,13 @@ const Item = styled(Paper)(({ theme }) => ({
 function Projects() {
   return (
     <>
-      <Typography>Projects</Typography>
+      <Typography
+        sx={{
+          fontSize: "h4",
+        }}
+      >
+        Projects
+      </Typography>
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container
