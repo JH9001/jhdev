@@ -1,6 +1,5 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
+import { Box } from "@mui/system";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -9,15 +8,7 @@ import LunchDiningIcon from "@mui/icons-material/LunchDining";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
-
-const links = [
-  { id: 1, icon: <GitHubIcon />, name: "GitHub" },
-  { id: 2, icon: <LinkedInIcon />, name: "LinkedIn" },
-  { id: 3, icon: <EmailIcon />, name: "Resume" },
-];
+import { navLinks } from "../data/data";
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -31,38 +22,35 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static">
+    <Box sx={{ pl: "4%", pr: "4%", pt: "2%", pb: "2%" }}>
       <Toolbar disableGutters>
         <Typography
-          variant="h6"
+          variant="h4"
           noWrap
           component="a"
           href="/"
           sx={{
+            flexGrow: 1,
             display: { xs: "none", md: "flex" },
-            fontFamily: "monospace",
-            fontWeight: 700,
-            letterSpacing: ".3rem",
-            color: "inherit",
+            fontWeight: 500,
             textDecoration: "none",
+            color: "inherit",
           }}
         >
           Joshua Hughes1
         </Typography>
 
         <Typography
-          variant="h5"
+          variant="h4"
           noWrap
           component="a"
           href=""
           sx={{
             display: { xs: "flex", md: "none" },
             flexGrow: 1,
-            fontFamily: "monospace",
-            fontWeight: 700,
-            letterSpacing: ".3rem",
-            color: "inherit",
+            fontWeight: 500,
             textDecoration: "none",
+            color: "inherit",
           }}
         >
           Joshua Hughes2
@@ -70,8 +58,6 @@ function Navbar() {
 
         <Box
           sx={{
-            flexGrow: 1,
-            justifyContent: "flex-end",
             display: { xs: "flex", md: "none" },
           }}
         >
@@ -103,7 +89,7 @@ function Navbar() {
               display: { xs: "block", md: "none" },
             }}
           >
-            {links.map((link) => (
+            {navLinks.map((link) => (
               <MenuItem key={link.id} onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">{link.name}</Typography>
               </MenuItem>
@@ -113,23 +99,22 @@ function Navbar() {
 
         <Box
           sx={{
-            flexGrow: 1,
             justifyContent: "flex-end",
             display: { xs: "none", md: "flex" },
           }}
         >
-          {links.map((link) => (
+          {navLinks.map((link) => (
             <Button
               key={link.id}
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}
+              sx={{ my: 2, color: "inherit", display: "block" }}
             >
               {link.icon}
             </Button>
           ))}
         </Box>
       </Toolbar>
-    </AppBar>
+    </Box>
   );
 }
 export default Navbar;

@@ -15,7 +15,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function Projects() {
   return (
-    <>
+    <Box sx={{ pl: "4%", pr: "4%" }}>
       <Typography
         sx={{
           fontSize: "h4",
@@ -36,7 +36,7 @@ function Projects() {
           ))}
         </Grid>
       </Box>
-    </>
+    </Box>
   );
 }
 
