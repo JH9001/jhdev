@@ -56,7 +56,8 @@ const ContactForm = () => {
             <Card sx={{ maxWidth: "50rem" }}>
               <Typography
                 sx={{
-                  fontSize: "2rem",
+                  fontSize: "h5",
+                  fontWeight: 500,
                   pt: "1.5rem",
                   pb: "1rem",
                   display: "flex",

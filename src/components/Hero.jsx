@@ -6,8 +6,11 @@ const Hero = () => {
     <Box
       sx={{
         display: "flex",
-        justifyContent: "center",
+        flexDirection: "column",
+        justifyContent: "space-around",
         textAlign: "center",
+        maxWidth: "1600px",
+        margin: "0 auto",
         pl: "4%",
         pr: "4%",
         pt: "6%",
@@ -16,13 +19,20 @@ const Hero = () => {
     >
       <Typography
         sx={{
-          fontSize: "2.8rem",
+          fontSize: "h1",
           fontWeight: 500,
-          letterSpacing: ".1rem",
           textDecoration: "none",
         }}
       >
-        Joshua Hughes is a web developer based in Melbourne, Australia.
+        Hey, I'm Josh ;)
+      </Typography>
+      <Typography
+        sx={{
+          fontSize: "h4",
+          textDecoration: "none",
+        }}
+      >
+        I'm a front-end web developer based in Melbourne.
       </Typography>
     </Box>
   );

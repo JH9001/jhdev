@@ -26,7 +26,7 @@ function TechStack() {
           alignItems: "center",
         }}
       >
-        Tech I <FavoriteIcon sx={{ ml: "0.4rem" }} />
+        Tech I <FavoriteIcon sx={{ ml: "0.4rem", color: "#f67011" }} />
       </Typography>
       <Box sx={{ pl: "4%", pr: "4%" }}>
         <Box

@@ -44,7 +44,7 @@ function Navbar() {
             color: "inherit",
           }}
         >
-          Joshua Hughes1
+          Joshua Hughes
         </Typography>
 
         <Typography
@@ -60,7 +60,7 @@ function Navbar() {
             color: "inherit",
           }}
         >
-          Joshua Hughes2
+          Joshua Hughes
         </Typography>
 
         <Box

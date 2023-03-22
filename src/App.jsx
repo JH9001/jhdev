@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Box
       sx={{
-        maxWidth: "2000px",
+        maxWidth: "1800px",
         margin: "0 auto",
       }}
     >
