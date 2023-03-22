@@ -5,8 +5,8 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import LunchDiningIcon from "@mui/icons-material/LunchDining";
-import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import Stack from "@mui/material/Stack";
 
 import { navLinks } from "../data/data";
 
@@ -22,7 +22,14 @@ function Navbar() {
   };
 
   return (
-    <Box sx={{ pl: "4%", pr: "4%", pt: "2%", pb: "2%" }}>
+    <Box
+      sx={{
+        pl: "4%",
+        pr: "4%",
+        pt: "2%",
+        pb: "2%",
+      }}
+    >
       <Toolbar disableGutters>
         <Typography
           variant="h4"
@@ -61,16 +68,19 @@ function Navbar() {
             display: { xs: "flex", md: "none" },
           }}
         >
-          <IconButton
-            size="large"
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleOpenNavMenu}
-            color="inherit"
-          >
-            <LunchDiningIcon />
-          </IconButton>
+          <Stack sx={{ "& :hover": { color: "#f67011" } }}>
+            <IconButton
+              size="large"
+              aria-label="hamburger"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+              sx={{ "& :hover": { color: "purple" } }}
+            >
+              <LunchDiningIcon />
+            </IconButton>
+          </Stack>
           <Menu
             id="menu-appbar"
             anchorEl={anchorElNav}
@@ -91,7 +101,7 @@ function Navbar() {
           >
             {navLinks.map((link) => (
               <MenuItem key={link.id} onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">{link.name}</Typography>
+                {link.name}
               </MenuItem>
             ))}
           </Menu>
@@ -103,15 +113,13 @@ function Navbar() {
             display: { xs: "none", md: "flex" },
           }}
         >
-          {navLinks.map((link) => (
-            <Button
-              key={link.id}
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "inherit", display: "block" }}
-            >
-              {link.icon}
-            </Button>
-          ))}
+          <Stack direction="row" sx={{ "& :hover": { color: "#f67011" } }}>
+            {navLinks.map((link) => (
+              <IconButton key={link.id} aria-label={link.name} size="large">
+                {link.icon}
+              </IconButton>
+            ))}
+          </Stack>
         </Box>
       </Toolbar>
     </Box>

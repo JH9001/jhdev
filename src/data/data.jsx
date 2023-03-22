@@ -14,7 +14,7 @@ export const techStackData = [
   { id: 3, name: "JavaScript", icon: javascript },
   { id: 4, name: "React", icon: react },
   { id: 5, name: "Vite", icon: vite },
-  { id: 6, name: "MUI", icon: mui },
+  { id: 6, name: "Material UI", icon: mui },
   { id: 7, name: "Git", icon: git },
   { id: 8, name: "GitHub", icon: github },
   { id: 9, name: "Linux", icon: linux },
@@ -26,8 +26,12 @@ import EmailIcon from "@mui/icons-material/Email";
 import CodeIcon from "@mui/icons-material/Code";
 
 export const navLinks = [
+  {
+    id: 2,
+    icon: <LinkedInIcon />,
+    name: "LinkedIn",
+  },
   { id: 1, icon: <GitHubIcon />, name: "GitHub" },
-  { id: 2, icon: <LinkedInIcon />, name: "LinkedIn" },
   { id: 3, icon: <EmailIcon />, name: "Resume" },
   { id: 4, icon: <CodeIcon />, name: "Source" },
 ];
