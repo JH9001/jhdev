@@ -64,41 +64,68 @@ const ContactForm = () => {
                   justifyContent: "center",
                 }}
               >
-                Send me an email
+                Contact Me
               </Typography>
               <CardContent>
                 <Grid container spacing={3}>
                   <Grid xs={12} sm={6} item>
+                    <Typography
+                      sx={{
+                        fontSize: "h7",
+                        fontWeight: 500,
+                        pb: "1%",
+                      }}
+                    >
+                      Name
+                    </Typography>
                     <TextField
                       variant="outlined"
                       type="text"
-                      label="Name *"
+                      placeholder="Enter Your Name"
                       onBlur={handleBlur}
                       onChange={handleChange}
                       value={values.name}
                       name="name"
                       error={!!touched.name && errors.name}
-                      sx={{ width: 1 }}
+                      sx={{ width: 1, bgcolor: "#dfe0e1" }}
                     />
                   </Grid>
                   <Grid xs={12} sm={6} item>
+                    <Typography
+                      sx={{
+                        fontSize: "h7",
+                        fontWeight: 500,
+                        pb: "1%",
+                      }}
+                    >
+                      Email
+                    </Typography>
                     <TextField
                       variant="outlined"
                       type="text"
-                      label="Email *"
+                      placeholder="Enter Your Email"
                       onBlur={handleBlur}
                       onChange={handleChange}
                       value={values.email}
                       name="email"
                       error={!!touched.email && errors.email}
-                      sx={{ width: 1 }}
+                      sx={{ width: 1, bgcolor: "#dfe0e1" }}
                     />
                   </Grid>
                   <Grid xs={12} item>
+                    <Typography
+                      sx={{
+                        fontSize: "h7",
+                        fontWeight: 500,
+                        pb: "1%",
+                      }}
+                    >
+                      Message
+                    </Typography>
                     <TextField
                       variant="outlined"
                       type="text"
-                      label="Message *"
+                      placeholder="Enter Your Message"
                       onBlur={handleBlur}
                       onChange={handleChange}
                       value={values.message}
@@ -106,7 +133,7 @@ const ContactForm = () => {
                       error={!!touched.message && errors.message}
                       multiline
                       rows={4}
-                      sx={{ width: 1 }}
+                      sx={{ width: 1, bgcolor: "#dfe0e1" }}
                     />
                   </Grid>
                   <Grid xs={12} item>

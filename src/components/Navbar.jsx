@@ -8,7 +8,7 @@ import LunchDiningIcon from "@mui/icons-material/LunchDining";
 import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 
-import { navLinks } from "../data/data";
+import { navLinksData } from "../data/data";
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -76,7 +76,6 @@ function Navbar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-              sx={{ "& :hover": { color: "purple" } }}
             >
               <LunchDiningIcon />
             </IconButton>
@@ -99,7 +98,7 @@ function Navbar() {
               display: { xs: "block", md: "none" },
             }}
           >
-            {navLinks.map((link) => (
+            {navLinksData.map((link) => (
               <MenuItem key={link.id} onClick={handleCloseNavMenu}>
                 {link.name}
               </MenuItem>
@@ -114,7 +113,7 @@ function Navbar() {
           }}
         >
           <Stack direction="row" sx={{ "& :hover": { color: "#f67011" } }}>
-            {navLinks.map((link) => (
+            {navLinksData.map((link) => (
               <IconButton key={link.id} aria-label={link.name} size="large">
                 {link.icon}
               </IconButton>

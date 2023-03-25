@@ -1,3 +1,4 @@
+//TechStack imports
 import css3 from "../assets/images/css3.svg";
 import git from "../assets/images/git.svg";
 import github from "../assets/images/github.svg";
@@ -20,12 +21,14 @@ export const techStackData = [
   { id: 9, name: "Linux", icon: linux },
 ];
 
+//NavLinks && Footer && Projects icons
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import CodeIcon from "@mui/icons-material/Code";
+import PublicIcon from "@mui/icons-material/Public";
 
-export const navLinks = [
+export const navLinksData = [
   {
     id: 2,
     icon: <LinkedInIcon />,
@@ -34,4 +37,21 @@ export const navLinks = [
   { id: 1, icon: <GitHubIcon />, name: "GitHub" },
   { id: 3, icon: <EmailIcon />, name: "Resume" },
   { id: 4, icon: <CodeIcon />, name: "Source" },
+];
+
+export const projectLinksData = [
+  { id: 1, icon: <PublicIcon />, name: "Public" },
+  { id: 2, icon: <GitHubIcon />, name: "GitHub" },
+];
+
+//Projects imports
+import sydney from "../assets/images/sydney.jpg";
+
+export const projectsData = [
+  { name: "Sydney", image: sydney },
+  { name: "Sydney", image: sydney },
+  { name: "Sydney", image: sydney },
+  { name: "Sydney", image: sydney },
+  { name: "Sydney", image: sydney },
+  { name: "Sydney", image: sydney },
 ];

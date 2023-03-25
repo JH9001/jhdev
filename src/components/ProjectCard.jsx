@@ -6,14 +6,15 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-export default function MediaCard() {
+import { projectLinksData } from "../data/data";
+import { IconButton } from "@mui/material";
+
+function ProjectCard({ item }) {
+  const { name, image } = item;
+
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
-      />
+    <Card>
+      <CardMedia sx={{ height: "22rem" }} image={image} title="green iguana" />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           Lizard
@@ -23,10 +24,15 @@ export default function MediaCard() {
           species, ranging across all continents except Antarctica
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+      <CardActions sx={{ "& :hover": { color: "#f67011" } }}>
+        {projectLinksData.map((link) => (
+          <IconButton key={link.id} aria-label={link.name} size="small">
+            {link.icon}
+          </IconButton>
+        ))}
       </CardActions>
     </Card>
   );
 }
+
+export default ProjectCard;

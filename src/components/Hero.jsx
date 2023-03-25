@@ -9,10 +9,10 @@ const Hero = () => {
         flexDirection: "column",
         justifyContent: "space-around",
         textAlign: "center",
-        maxWidth: "1600px",
+        maxWidth: "1200px",
         margin: "0 auto",
-        pl: "4%",
-        pr: "4%",
+        pl: "6%",
+        pr: "6%",
         pt: "6%",
         pb: "6%",
       }}
@@ -32,7 +32,8 @@ const Hero = () => {
           textDecoration: "none",
         }}
       >
-        I'm a front-end web developer based in Melbourne.
+        A Frontend focused Web Developer building the Frontend of Websites and
+        Web Applications
       </Typography>
     </Box>
   );
