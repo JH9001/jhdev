@@ -22,25 +22,27 @@ export const techStackData = [
 ];
 
 //NavLinks && Footer && Projects icons
-import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
+import DescriptionIcon from "@mui/icons-material/Description";
 import CodeIcon from "@mui/icons-material/Code";
 import PublicIcon from "@mui/icons-material/Public";
 
 export const navLinksData = [
   {
-    id: 2,
+    id: 1,
     icon: <LinkedInIcon />,
     name: "LinkedIn",
   },
-  { id: 1, icon: <GitHubIcon />, name: "GitHub" },
-  { id: 3, icon: <EmailIcon />, name: "Resume" },
-  { id: 4, icon: <CodeIcon />, name: "Source" },
+  { id: 2, icon: <GitHubIcon />, name: "GitHub" },
+  { id: 3, icon: <DescriptionIcon />, name: "Resume" },
+  { id: 4, icon: <EmailIcon />, name: "Email" },
+  { id: 5, icon: <CodeIcon />, name: "Source" },
 ];
 
 export const projectLinksData = [
-  { id: 1, icon: <PublicIcon />, name: "Public" },
+  { id: 1, icon: <PublicIcon />, name: "Preview" },
   { id: 2, icon: <GitHubIcon />, name: "GitHub" },
 ];
 

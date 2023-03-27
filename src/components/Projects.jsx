@@ -20,7 +20,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function Projects() {
   return (
-    <Box sx={{ pl: "6%", pr: "6%", pt: "6%" }}>
+    <Box sx={{ pl: "4%", pr: "4%", pt: "6%" }}>
       <Typography
         sx={{
           fontSize: "h5",

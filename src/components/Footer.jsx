@@ -2,9 +2,8 @@ import { Box } from "@mui/system";
 import Stack from "@mui/material/Stack";
 import IconButton from "@mui/material/IconButton";
 
-import DescriptionIcon from "@mui/icons-material/Description";
-
 import { navLinksData } from "../data/data";
+import { Tooltip } from "@mui/material";
 
 const Footer = () => {
   return (
@@ -23,9 +22,11 @@ const Footer = () => {
         sx={{ "& :hover": { color: "#f67011" } }}
       >
         {navLinksData.map((link) => (
-          <IconButton key={link.id} aria-label={link.name} size="large">
-            {link.icon}
-          </IconButton>
+          <Tooltip key={link.id} title={link.name} arrow>
+            <IconButton aria-label={link.name} size="large">
+              {link.icon}
+            </IconButton>
+          </Tooltip>
         ))}
       </Stack>
     </Box>

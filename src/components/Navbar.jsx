@@ -4,11 +4,12 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
-import LunchDiningIcon from "@mui/icons-material/LunchDining";
+import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 
 import { navLinksData } from "../data/data";
+import { Tooltip } from "@mui/material";
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -77,7 +78,7 @@ function Navbar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <LunchDiningIcon />
+              <MenuIcon />
             </IconButton>
           </Stack>
           <Menu
@@ -114,9 +115,11 @@ function Navbar() {
         >
           <Stack direction="row" sx={{ "& :hover": { color: "#f67011" } }}>
             {navLinksData.map((link) => (
-              <IconButton key={link.id} aria-label={link.name} size="large">
-                {link.icon}
-              </IconButton>
+              <Tooltip key={link.id} title={link.name} arrow>
+                <IconButton aria-label={link.name} size="large">
+                  {link.icon}
+                </IconButton>
+              </Tooltip>
             ))}
           </Stack>
         </Box>
