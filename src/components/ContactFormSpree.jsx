@@ -1,3 +1,6 @@
+import React from "react";
+import { useForm } from "@formspree/react";
+
 import {
   Button,
   Card,
@@ -6,6 +9,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+
 import { Box } from "@mui/system";
 
 import { Form, Formik } from "formik";
@@ -23,11 +27,32 @@ const userSchema = yup.object().shape({
   message: yup.string().required("required"),
 });
 
-const ContactForm = () => {
-  const handleFormSubmit = (values) => {
-    console.log(values);
-  };
-
+function ContactFormSpree() {
+  const [state, handleSubmit] = useForm("xpzejebo");
+  if (state.succeeded) {
+    return (
+      <Box
+        sx={{
+          pl: "4%",
+          pr: "4%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: "h5",
+            fontWeight: 500,
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          Thanks for getting in touch!
+        </Typography>
+      </Box>
+    );
+  }
   return (
     <Box
       sx={{
@@ -40,7 +65,7 @@ const ContactForm = () => {
       }}
     >
       <Formik
-        onSubmit={handleFormSubmit}
+        onSubmit={handleSubmit}
         initialValues={initialValues}
         validationSchema={userSchema}
       >
@@ -52,7 +77,11 @@ const ContactForm = () => {
           handleChange,
           handleSubmit,
         }) => (
-          <Form onSubmit={handleSubmit}>
+          <Form
+            action="https://formspree.io/f/xpzejebo"
+            onSubmit={handleSubmit}
+            method="POST"
+          >
             <Card sx={{ maxWidth: "50rem" }}>
               <Typography
                 sx={{
@@ -89,15 +118,15 @@ const ContactForm = () => {
                       Name
                     </Typography>
                     <TextField
+                      id="name"
+                      name="name"
                       variant="outlined"
-                      type="text"
                       placeholder="Enter Your Name"
+                      sx={{ width: 1, bgcolor: "#dfe0e1" }}
                       onBlur={handleBlur}
                       onChange={handleChange}
                       value={values.name}
-                      name="name"
                       error={!!touched.name && errors.name}
-                      sx={{ width: 1, bgcolor: "#dfe0e1" }}
                     />
                   </Grid>
                   <Grid xs={12} sm={6} item>
@@ -111,15 +140,16 @@ const ContactForm = () => {
                       Email
                     </Typography>
                     <TextField
-                      variant="outlined"
+                      id="email"
                       type="text"
+                      name="email"
+                      variant="outlined"
                       placeholder="Enter Your Email"
+                      sx={{ width: 1, bgcolor: "#dfe0e1" }}
                       onBlur={handleBlur}
                       onChange={handleChange}
                       value={values.email}
-                      name="email"
                       error={!!touched.email && errors.email}
-                      sx={{ width: 1, bgcolor: "#dfe0e1" }}
                     />
                   </Grid>
                   <Grid xs={12} item>
@@ -133,17 +163,17 @@ const ContactForm = () => {
                       Message
                     </Typography>
                     <TextField
+                      id="message"
+                      name="message"
                       variant="outlined"
-                      type="text"
-                      placeholder="Enter Your Message"
+                      multiline
+                      rows={4}
+                      placeholder="Enter Your Email"
+                      sx={{ width: 1, bgcolor: "#dfe0e1" }}
                       onBlur={handleBlur}
                       onChange={handleChange}
                       value={values.message}
-                      name="message"
                       error={!!touched.message && errors.message}
-                      multiline
-                      rows={4}
-                      sx={{ width: 1, bgcolor: "#dfe0e1" }}
                     />
                   </Grid>
                   <Grid xs={12} item>
@@ -169,5 +199,6 @@ const ContactForm = () => {
       </Formik>
     </Box>
   );
-};
-export default ContactForm;
+}
+
+export default ContactFormSpree;

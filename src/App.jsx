@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
-import ContactForm from "./components/ContactForm";
+import ContactFormSpree from "./components/ContactFormSpree";
 import Footer from "./components/Footer";
 import { Box } from "@mui/system";
 
@@ -18,7 +18,7 @@ const App = () => {
       <Hero />
       <TechStack />
       <Projects />
-      <ContactForm />
+      <ContactFormSpree />
       <Footer />
     </Box>
   );

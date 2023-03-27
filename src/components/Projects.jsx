@@ -22,7 +22,7 @@ const Item = styled(Paper)(({ theme }) => ({
 function Projects() {
   return (
     <Box sx={{ pl: "4%", pr: "4%", pt: "6%" }}>
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Box sx={{ display: "flex", justifyContent: "center", pb: "2%" }}>
         <UseAnimations animation={arrowDown} size={40} strokeColor="#f67011" />
         <Typography
           sx={{
@@ -32,7 +32,6 @@ function Projects() {
             textAlign: "center",
             pl: "2%",
             pr: "2%",
-            pb: "2%",
           }}
         >
           Check out some of my projects
