@@ -23,7 +23,13 @@ const Footer = () => {
       >
         {navLinksData.map((link) => (
           <Tooltip key={link.id} title={link.name} arrow>
-            <IconButton aria-label={link.name} size="large">
+            <IconButton
+              component="a"
+              href={link.href}
+              target="_blank"
+              aria-label={link.name}
+              size="large"
+            >
               {link.icon}
             </IconButton>
           </Tooltip>

@@ -27,9 +27,11 @@ function ProjectCard({ item }) {
       <CardActions sx={{ "& :hover": { color: "#f67011" } }}>
         {projectLinksData.map((link) => (
           <Tooltip key={link.id} title={link.name} arrow>
-            <IconButton aria-label={link.name} size="small">
-              {link.icon}
-            </IconButton>
+            <a href={link.href} target="_blank">
+              <IconButton aria-label={link.name} size="small">
+                {link.icon}
+              </IconButton>
+            </a>
           </Tooltip>
         ))}
       </CardActions>

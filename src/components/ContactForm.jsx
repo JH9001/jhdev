@@ -59,12 +59,22 @@ const ContactForm = () => {
                   fontSize: "h5",
                   fontWeight: 500,
                   pt: "1.5rem",
-                  pb: "1rem",
                   display: "flex",
                   justifyContent: "center",
                 }}
               >
                 Contact Me
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "h7",
+                  color: "#f67011",
+                  pb: "1rem",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                ( I'll get back to you! )
               </Typography>
               <CardContent>
                 <Grid container spacing={3}>

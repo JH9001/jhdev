@@ -24,7 +24,7 @@ function TechStack() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          pb: "0.8%%",
+          pb: "0.8%",
         }}
       >
         Tech I <FavoriteIcon sx={{ ml: "0.4rem", color: "#f67011" }} />

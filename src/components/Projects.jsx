@@ -8,7 +8,8 @@ import { Typography } from "@mui/material";
 import { projectsData } from "../data/data";
 import ProjectCard from "./ProjectCard";
 
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import UseAnimations from "react-useanimations";
+import arrowDown from "react-useanimations/lib/arrowDown";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -21,19 +22,23 @@ const Item = styled(Paper)(({ theme }) => ({
 function Projects() {
   return (
     <Box sx={{ pl: "4%", pr: "4%", pt: "6%" }}>
-      <Typography
-        sx={{
-          fontSize: "h5",
-          fontWeight: 500,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          pb: "2%",
-        }}
-      >
-        <ArrowDownwardIcon /> Check out some of my projects
-        <ArrowDownwardIcon />
-      </Typography>
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <UseAnimations animation={arrowDown} size={40} strokeColor="#f67011" />
+        <Typography
+          sx={{
+            fontSize: "h5",
+            fontWeight: 500,
+            display: "flex",
+            textAlign: "center",
+            pl: "2%",
+            pr: "2%",
+            pb: "2%",
+          }}
+        >
+          Check out some of my projects
+        </Typography>
+        <UseAnimations animation={arrowDown} size={40} strokeColor="#f67011" />
+      </Box>
       <Box>
         <Grid container spacing={{ xs: 3.5, md: 3.5 }}>
           {projectsData.map((item, index) => (

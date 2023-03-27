@@ -116,7 +116,12 @@ function Navbar() {
           <Stack direction="row" sx={{ "& :hover": { color: "#f67011" } }}>
             {navLinksData.map((link) => (
               <Tooltip key={link.id} title={link.name} arrow>
-                <IconButton aria-label={link.name} size="large">
+                <IconButton
+                  href={link.href}
+                  target="_blank"
+                  aria-label={link.name}
+                  size="large"
+                >
                   {link.icon}
                 </IconButton>
               </Tooltip>
