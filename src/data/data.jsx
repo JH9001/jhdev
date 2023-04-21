@@ -1,13 +1,13 @@
 //TechStack imports
-import css3 from "../assets/images/css3.svg";
-import git from "../assets/images/git.svg";
-import github from "../assets/images/github.svg";
-import html5 from "../assets/images/html5.svg";
-import javascript from "../assets/images/javascript.svg";
-import linux from "../assets/images/linux.svg";
-import mui from "../assets/images/mui.svg";
-import react from "../assets/images/react.svg";
-import vite from "../assets/images/vite.svg";
+import css3 from "../assets/images/icons/css3.svg";
+import git from "../assets/images/icons/git.svg";
+import github from "../assets/images/icons/github.svg";
+import html5 from "../assets/images/icons/html5.svg";
+import javascript from "../assets/images/icons/javascript.svg";
+import linux from "../assets/images/icons/linux.svg";
+import mui from "../assets/images/icons/mui.svg";
+import react from "../assets/images/icons/react.svg";
+import vite from "../assets/images/icons/vite.svg";
 
 export const techStackData = [
   { id: 1, name: "HTML5", icon: html5 },
@@ -53,10 +53,11 @@ export const projectLinksData = [
 ];
 
 //Projects imports
-import sydney from "../assets/images/sydney.jpg";
+import sydney from "../assets/images/projects/sydney.jpg";
+import pokedex from "../assets/images/projects/pokedex.png";
 
 export const projectsData = [
-  { name: "Sydney", image: sydney },
+  { name: "pokedex", image: pokedex },
   { name: "Sydney", image: sydney },
   { name: "Sydney", image: sydney },
   { name: "Sydney", image: sydney },

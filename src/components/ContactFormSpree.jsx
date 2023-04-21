@@ -33,8 +33,9 @@ function ContactFormSpree() {
     return (
       <Box
         sx={{
-          pl: "4%",
-          pr: "4%",
+          ml: "4%",
+          mr: "4%",
+          mt: "6%",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -56,9 +57,9 @@ function ContactFormSpree() {
   return (
     <Box
       sx={{
-        pl: "4%",
-        pr: "4%",
-        pt: "6%",
+        ml: "4%",
+        mr: "4%",
+        mt: "6%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -87,7 +88,7 @@ function ContactFormSpree() {
                 sx={{
                   fontSize: "h5",
                   fontWeight: 500,
-                  pt: "1.5rem",
+                  mt: "1.5rem",
                   display: "flex",
                   justifyContent: "center",
                 }}
@@ -98,7 +99,7 @@ function ContactFormSpree() {
                 sx={{
                   fontSize: "h7",
                   color: "#f67011",
-                  pb: "1rem",
+                  mb: "1rem",
                   display: "flex",
                   justifyContent: "center",
                 }}
@@ -112,7 +113,7 @@ function ContactFormSpree() {
                       sx={{
                         fontSize: "h7",
                         fontWeight: 500,
-                        pb: "1%",
+                        mb: "1%",
                       }}
                     >
                       Name
@@ -134,7 +135,7 @@ function ContactFormSpree() {
                       sx={{
                         fontSize: "h7",
                         fontWeight: 500,
-                        pb: "1%",
+                        mb: "1%",
                       }}
                     >
                       Email
@@ -157,7 +158,7 @@ function ContactFormSpree() {
                       sx={{
                         fontSize: "h7",
                         fontWeight: 500,
-                        pb: "1%",
+                        mb: "1%",
                       }}
                     >
                       Message
