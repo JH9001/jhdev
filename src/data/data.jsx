@@ -62,11 +62,6 @@ export const navLinksData = [
   },
 ];
 
-export const projectLinksData = [
-  { id: 1, icon: <PublicIcon />, name: "Preview" },
-  { id: 2, icon: <GitHubIcon />, name: "GitHub" },
-];
-
 //Projects imports
 import taskify from "../assets/images/projects/taskify.png";
 import jhdev from "../assets/images/projects/jhdev.png";
@@ -82,24 +77,66 @@ export const projectsData = [
     description2:
       "To implement the search functionality, I used the popular formik library. Additionally, I leveraged Material UI to style the app and ensure it was user-friendly and responsive. I also incorporated dynamic styling into the app by setting the page theme based on the primary color of each Pokémon.",
     tech: ["HTML", "CSS", "JavaScript", "React", "Material UI"],
+    links: [
+      {
+        id: 1,
+        icon: <PublicIcon />,
+        name: "Preview",
+        href: "https://jh9001-pokedex.netlify.app/",
+      },
+      {
+        id: 2,
+        icon: <GitHubIcon />,
+        name: "GitHub",
+        href: "https://github.com/JH9001/pokedex",
+      },
+    ],
   },
   {
     name: "Portfolio Website",
     image: jhdev,
     description1:
-      "This portfolio website was built from scratch using React and Material UI, enabling me to create a responsive and dynamic design by leveraging pre-built UI components.",
+      "This portfolio website was built from scratch using React and Material UI, enabling me to create a responsive and dynamic design by customizing Material UI components.",
     description2:
       "The contact form was built using formik and yup and includes form validation to ensure that all input data is accurate and complete. It is connected to the formspree backend service, which allows me to receive messages from the contact form in my email.",
     tech: ["HTML", "CSS", "JavaScript", "React", "Material UI"],
+    links: [
+      {
+        id: 1,
+        icon: <PublicIcon />,
+        name: "Preview",
+        href: "",
+      },
+      {
+        id: 2,
+        icon: <GitHubIcon />,
+        name: "GitHub",
+        href: "https://github.com/JH9001/jhdev",
+      },
+    ],
   },
   {
-    name: "Taskify",
+    name: "To-Do List",
     image: taskify,
     description1:
       "Simple to-do list app styled with the Bulma framework for an intuitive interface that allows users to effortlessly create, sort, and delete to-dos. Priorities can be assigned to each to-do, which are color-coded to help users prioritize their workload.",
     description2:
       "The app is designed using the Model-View-Controller pattern, with separate files for the Model and View Controller, ensuring a clean and organized codebase.",
     tech: ["HTML", "CSS", "JavaScript", "Bulma"],
+    links: [
+      {
+        id: 1,
+        icon: <PublicIcon />,
+        name: "Preview",
+        href: "https://jh9001.github.io/taskify/",
+      },
+      {
+        id: 2,
+        icon: <GitHubIcon />,
+        name: "GitHub",
+        href: "https://github.com/JH9001/taskify",
+      },
+    ],
   },
   {
     name: "Calculator",
@@ -109,5 +146,19 @@ export const projectsData = [
     description2:
       "The calculator also includes a button that toggles numbers from positive to negative. To prevent display overflow, long numbers are automatically truncated and displayed up to seven digits.",
     tech: ["HTML", "CSS", "JavaScript"],
+    links: [
+      {
+        id: 1,
+        icon: <PublicIcon />,
+        name: "Preview",
+        href: "https://jh9001.github.io/calculator/",
+      },
+      {
+        id: 2,
+        icon: <GitHubIcon />,
+        name: "GitHub",
+        href: "https://github.com/JH9001/calculator",
+      },
+    ],
   },
 ];

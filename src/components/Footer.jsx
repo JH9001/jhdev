@@ -3,23 +3,24 @@ import Stack from "@mui/material/Stack";
 import IconButton from "@mui/material/IconButton";
 
 import { navLinksData } from "../data/data";
-import { Tooltip } from "@mui/material";
+import { Tooltip, Typography } from "@mui/material";
 
 const Footer = () => {
   return (
     <Box
       sx={{
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        mt: "6%",
-        mb: "6%",
+        mt: "6rem",
+        mb: "3%",
       }}
     >
       <Stack
         direction="row"
         spacing={1}
-        sx={{ "& :hover": { color: "#f67011" } }}
+        sx={{ "& :hover": { color: "#f67011" }, pt: "3rem" }}
       >
         {navLinksData.map((link) => (
           <Tooltip key={link.id} title={link.name} arrow>
@@ -35,6 +36,9 @@ const Footer = () => {
           </Tooltip>
         ))}
       </Stack>
+      <Typography sx={{ pt: "2rem", fontSize: "0.8rem", fontWeight: 700 }}>
+        Designed & Built by Joshua Hughes
+      </Typography>
     </Box>
   );
 };

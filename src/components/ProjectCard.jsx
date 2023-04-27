@@ -6,11 +6,11 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-import { projectLinksData } from "../data/data";
+// import { projectLinksData } from "../data/data";
 import { Box, Grid, IconButton, Tooltip } from "@mui/material";
 
 function ProjectCard({ item }) {
-  const { name, image, description1, description2, tech } = item;
+  const { name, image, description1, description2, tech, links } = item;
 
   return (
     <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
@@ -31,14 +31,14 @@ function ProjectCard({ item }) {
           {name}
         </Typography>
         <Typography
-          variant="body2"
+          variant="body1"
           color="text.secondary"
           sx={{ fontWeight: 500, pb: "1rem" }}
         >
           {description1}
         </Typography>
         <Typography
-          variant="body2"
+          variant="body1"
           color="text.secondary"
           sx={{ fontWeight: 500 }}
         >
@@ -55,7 +55,12 @@ function ProjectCard({ item }) {
               <Grid item>
                 <Typography
                   key={index}
-                  sx={{ pt: "1.5rem", pr: "1rem", fontWeight: 500 }}
+                  sx={{
+                    pt: "1.5rem",
+                    pr: "1rem",
+                    fontWeight: 500,
+                    fontSize: "1.2rem",
+                  }}
                 >
                   {item}
                 </Typography>
@@ -74,8 +79,8 @@ function ProjectCard({ item }) {
           mt: "auto",
         }}
       >
-        {projectLinksData.map((link) => (
-          <Tooltip key={link.id} title={link.name} arrow>
+        {links.map((link, index) => (
+          <Tooltip key={index} title={link.name} arrow>
             <a href={link.href} target="_blank">
               <IconButton aria-label={link.name} size="large">
                 {link.icon}
