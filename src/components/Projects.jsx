@@ -1,7 +1,6 @@
 import * as React from "react";
 import { experimentalStyled as styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
 import { Typography } from "@mui/material";
 
@@ -10,14 +9,6 @@ import ProjectCard from "./ProjectCard";
 
 import UseAnimations from "react-useanimations";
 import arrowDown from "react-useanimations/lib/arrowDown";
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
 
 function Projects() {
   return (

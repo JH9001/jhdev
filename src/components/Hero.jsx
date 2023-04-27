@@ -32,8 +32,8 @@ const Hero = () => {
           textDecoration: "none",
         }}
       >
-        A Frontend focused Web Developer building the Frontend of Websites and
-        Web Applications
+        A Web Developer building and optimizing user interfaces for websites and
+        web applications.
       </Typography>
     </Box>
   );

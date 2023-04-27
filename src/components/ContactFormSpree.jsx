@@ -169,7 +169,7 @@ function ContactFormSpree() {
                       variant="outlined"
                       multiline
                       rows={4}
-                      placeholder="Enter Your Email"
+                      placeholder="Enter Your Message"
                       sx={{ width: 1, bgcolor: "#dfe0e1" }}
                       onBlur={handleBlur}
                       onChange={handleChange}
@@ -177,19 +177,26 @@ function ContactFormSpree() {
                       error={!!touched.message && errors.message}
                     />
                   </Grid>
-                  <Grid xs={12} item>
+                  <Grid
+                    xs={12}
+                    item
+                    sx={{ display: "flex", justifyContent: "flex-end" }}
+                  >
                     <Button
                       variant="contained"
                       type="submit"
                       sx={{
                         width: 1,
+                        height: "60px",
                         bgcolor: "#666767",
                         ":hover": {
                           bgcolor: "#f67011",
                         },
                       }}
                     >
-                      Submit
+                      <Typography fontSize="1.35rem" fontWeight={500}>
+                        Submit
+                      </Typography>
                     </Button>
                   </Grid>
                 </Grid>

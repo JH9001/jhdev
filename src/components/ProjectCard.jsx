@@ -7,28 +7,77 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 import { projectLinksData } from "../data/data";
-import { IconButton, Tooltip } from "@mui/material";
+import { Box, Grid, IconButton, Tooltip } from "@mui/material";
 
 function ProjectCard({ item }) {
-  const { name, image } = item;
+  const { name, image, description1, description2, tech } = item;
 
   return (
-    <Card>
-      <CardMedia sx={{ height: "28rem" }} image={image} title="green iguana" />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+    <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+      <CardMedia
+        component="img"
+        image={image}
+        alt={name}
+        title={name}
+        sx={{ padding: "1em 1em 0 1em", objectFit: "contain" }}
+      />
+      <CardContent sx={{ fontSize: "h5" }}>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          sx={{ fontWeight: 500, pt: "0.5rem", pb: "0.5rem" }}
+        >
           {name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{ fontWeight: 500, pb: "1rem" }}
+        >
+          {description1}
         </Typography>
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{ fontWeight: 500 }}
+        >
+          {description2}
+        </Typography>
+        <Grid
+          container
+          sx={{
+            display: "flex",
+          }}
+        >
+          {tech.map((item, index) => {
+            return (
+              <Grid item>
+                <Typography
+                  key={index}
+                  sx={{ pt: "1.5rem", pr: "1rem", fontWeight: 500 }}
+                >
+                  {item}
+                </Typography>
+              </Grid>
+            );
+          })}
+        </Grid>
       </CardContent>
-      <CardActions sx={{ "& :hover": { color: "#f67011" } }}>
+      <CardActions
+        sx={{
+          "& :hover": { color: "#f67011" },
+          display: "flex",
+          justifyContent: "flex-end",
+          pr: "1.5rem",
+          pb: "1rem",
+          mt: "auto",
+        }}
+      >
         {projectLinksData.map((link) => (
           <Tooltip key={link.id} title={link.name} arrow>
             <a href={link.href} target="_blank">
-              <IconButton aria-label={link.name} size="small">
+              <IconButton aria-label={link.name} size="large">
                 {link.icon}
               </IconButton>
             </a>
