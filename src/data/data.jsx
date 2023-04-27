@@ -105,7 +105,7 @@ export const projectsData = [
         id: 1,
         icon: <PublicIcon />,
         name: "Preview",
-        href: "",
+        href: "https://joshuahughes.dev",
       },
       {
         id: 2,
