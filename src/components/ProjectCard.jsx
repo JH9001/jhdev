@@ -3,11 +3,9 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-// import { projectLinksData } from "../data/data";
-import { Box, Grid, IconButton, Tooltip } from "@mui/material";
+import { Grid, IconButton, Tooltip } from "@mui/material";
 
 function ProjectCard({ item }) {
   const { name, image, description1, description2, tech, links } = item;
@@ -50,11 +48,10 @@ function ProjectCard({ item }) {
             display: "flex",
           }}
         >
-          {tech.map((item, index) => {
+          {tech.map((item) => {
             return (
-              <Grid item>
+              <Grid item key={item.id}>
                 <Typography
-                  key={index}
                   sx={{
                     pt: "1.5rem",
                     pr: "1rem",
@@ -62,7 +59,7 @@ function ProjectCard({ item }) {
                     fontSize: "1.2rem",
                   }}
                 >
-                  {item}
+                  {item.name}
                 </Typography>
               </Grid>
             );
@@ -79,8 +76,8 @@ function ProjectCard({ item }) {
           mt: "auto",
         }}
       >
-        {links.map((link, index) => (
-          <Tooltip key={index} title={link.name} arrow>
+        {links.map((link) => (
+          <Tooltip key={link.id} title={link.name} arrow>
             <a href={link.href} target="_blank">
               <IconButton aria-label={link.name} size="large">
                 {link.icon}

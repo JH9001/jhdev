@@ -9,7 +9,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 
 import { navLinksData } from "../data/data";
-import { Tooltip } from "@mui/material";
+import { Link, Tooltip } from "@mui/material";
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -20,6 +20,12 @@ function Navbar() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const handleLinkClick = (e, href) => {
+    e.preventDefault();
+    window.open(href, "_blank");
+    handleCloseNavMenu();
   };
 
   return (
@@ -100,7 +106,11 @@ function Navbar() {
             }}
           >
             {navLinksData.map((link) => (
-              <MenuItem key={link.id} onClick={handleCloseNavMenu}>
+              <MenuItem
+                key={link.id}
+                variant="link"
+                onClick={(e) => handleLinkClick(e, link.href)}
+              >
                 {link.name}
               </MenuItem>
             ))}
